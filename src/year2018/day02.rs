@@ -1,3 +1,9 @@
+// TODO: Part 2 can be improved by going through each string and creating a substring with one letter removed.
+// Add all of these to a set and when a duplicate is found, return it.
+// This would reduce the time complexity significantly.
+// The current implementation is O(n^2) due to the nested loops.
+// The improved version would be O(n * m) where n is the number of strings and m is the length of the strings.
+
 pub fn part1(input: &str) -> i32 {
     let mut count_two = 0;
     let mut count_three = 0;
