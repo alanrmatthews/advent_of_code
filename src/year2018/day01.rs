@@ -19,7 +19,7 @@ pub fn part2(input: &str) -> i32 {
 }
 
 #[cfg(test)]
-mod tests_2018 {
+mod tests {
     use super::*;
 
     #[test]
