@@ -31,11 +31,13 @@ pub fn run_2018() {
     let day1_input: &'static str = include_str!("year2018/inputs/day1.txt");
     println!("Part 1: {}", day01::part1(day1_input));
     println!("Part 2: {}", day01::part2(day1_input));
+    println!();
 
     println!("Day 2: Inventory Management System");
     let day2_input: &'static str = include_str!("year2018/inputs/day2.txt");
     println!("Part 1: {}", day02::part1(day2_input));
     println!("Part 2: {}", day02::part2(day2_input));
+    println!();
 
     // day03::run();
     // day04::run();
