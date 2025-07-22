@@ -21,6 +21,7 @@ pub fn part2(input: &str) -> i32 {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::utilities;
 
     #[test]
     fn test_part1_examples() {
@@ -41,13 +42,13 @@ mod tests {
 
     #[test]
     fn test_part1_input() {
-        let input = include_str!("inputs/day1.txt");
-        assert_eq!(part1(input), 513);
+        let input = utilities::get_input_contents(2018, 1);
+        assert_eq!(part1(input.as_str()), 513);
     }
 
     #[test]
     fn test_part2_input() {
-        let input = include_str!("inputs/day1.txt");
-        assert_eq!(part2(input), 287);
+        let input = utilities::get_input_contents(2018, 1);
+        assert_eq!(part2(input.as_str()), 287);
     }
 }

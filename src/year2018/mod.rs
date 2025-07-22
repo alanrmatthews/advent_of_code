@@ -1,3 +1,5 @@
+use crate::utilities::{self};
+
 mod day01;
 mod day02;
 // mod day03;
@@ -28,15 +30,15 @@ pub fn run_2018() {
     println!("\n=== 2018 Solutions ===");
 
     println!("Day 1: Chronal Calibration");
-    let day1_input: &'static str = include_str!("year2018/inputs/day1.txt");
-    println!("Part 1: {}", day01::part1(day1_input));
-    println!("Part 2: {}", day01::part2(day1_input));
+    let day1_input = utilities::get_input_contents(2018, 1);
+    println!("Part 1: {}", day01::part1(day1_input.as_str()));
+    println!("Part 2: {}", day01::part2(day1_input.as_str()));
     println!();
 
     println!("Day 2: Inventory Management System");
-    let day2_input: &'static str = include_str!("year2018/inputs/day2.txt");
-    println!("Part 1: {}", day02::part1(day2_input));
-    println!("Part 2: {}", day02::part2(day2_input));
+    let day2_input = utilities::get_input_contents(2018, 2);
+    println!("Part 1: {}", day02::part1(day2_input.as_str()));
+    println!("Part 2: {}", day02::part2(day2_input.as_str()));
     println!();
 
     // day03::run();

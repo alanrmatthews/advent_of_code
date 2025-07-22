@@ -14,7 +14,7 @@ pub fn part1(input: &str) -> i32 {
         count_three += three;
     }
 
-    return count_two * count_three;
+    count_two * count_three
 }
 
 pub fn part2(input: &str) -> String {
@@ -64,6 +64,7 @@ fn check_box_id(input: &str) -> (i32, i32) {
 #[cfg(test)]
 mod test {
     use super::*;
+    use crate::utilities;
 
     #[test]
     fn test_part1_examples() {
@@ -77,13 +78,13 @@ mod test {
 
     #[test]
     fn test_part1_input() {
-        let input = include_str!("inputs/day2.txt");
-        assert_eq!(part1(input), 7872);
+        let input = utilities::get_input_contents(2018, 2);
+        assert_eq!(part1(input.as_str()), 7872);
     }
 
     #[test]
     fn test_part2_input() {
-        let input = include_str!("inputs/day2.txt");
-        assert_eq!(part2(input), "tjxmoewpdkyaihvrndfluwbzc");
+        let input = utilities::get_input_contents(2018, 2);
+        assert_eq!(part2(input.as_str()), "tjxmoewpdkyaihvrndfluwbzc");
     }
 }
