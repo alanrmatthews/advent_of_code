@@ -29,6 +29,9 @@ mod tests {
         assert_eq!(part1("+1\n+1\n+1\n"), 3);
         assert_eq!(part1("+1\n+1\n-2\n"), 0);
         assert_eq!(part1("-1\n-2\n-3\n"), -6);
+
+        let input = utilities::get_input_contents(2018, 1);
+        assert_eq!(part1(input.as_str()), 513);
     }
 
     #[test]
@@ -38,16 +41,7 @@ mod tests {
         assert_eq!(part2("+3\n+3\n+4\n-2\n-4\n"), 10);
         assert_eq!(part2("-6\n+3\n+8\n+5\n-6\n"), 5);
         assert_eq!(part2("+7\n+7\n-2\n-7\n-4\n"), 14);
-    }
 
-    #[test]
-    fn test_part1_input() {
-        let input = utilities::get_input_contents(2018, 1);
-        assert_eq!(part1(input.as_str()), 513);
-    }
-
-    #[test]
-    fn test_part2_input() {
         let input = utilities::get_input_contents(2018, 1);
         assert_eq!(part2(input.as_str()), 287);
     }

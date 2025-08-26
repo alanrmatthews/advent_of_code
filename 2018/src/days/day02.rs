@@ -67,23 +67,17 @@ mod test {
     use crate::utilities;
 
     #[test]
-    fn test_part1_examples() {
+    fn test_part1() {
         assert_eq!(part1("abcdef\nbababc\nabbcde\nabcccd\naabcdd\naabcde\nababab"), 12);
-    }
 
-    #[test]
-    fn test_part2_examples() {
-        assert_eq!(part2("abcde\nfghij\nklmno\npqrst\nfguij\naxcye\nwvxyz"), "fgij");
-    }
-
-    #[test]
-    fn test_part1_input() {
         let input = utilities::get_input_contents(2018, 2);
         assert_eq!(part1(input.as_str()), 7872);
     }
 
     #[test]
-    fn test_part2_input() {
+    fn test_part2_examples() {
+        assert_eq!(part2("abcde\nfghij\nklmno\npqrst\nfguij\naxcye\nwvxyz"), "fgij");
+
         let input = utilities::get_input_contents(2018, 2);
         assert_eq!(part2(input.as_str()), "tjxmoewpdkyaihvrndfluwbzc");
     }

@@ -1,8 +1,8 @@
 mod utilities;
-mod year2018;
+mod days;
 
 fn main() {
     println!("🎄 Advent of Code Solutions 🎄");
 
-    year2018::run_2018();
+    days::run_2018();
 }
