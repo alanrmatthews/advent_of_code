@@ -36,14 +36,13 @@ pub fn part2(input: &str) -> String {
                 }
             }
 
-            if diff_count == 1 {
-                if let Some(diff_idx) = diff_index {
+            if diff_count == 1
+                && let Some(diff_idx) = diff_index {
                     let common_id = id1.chars().enumerate()
                         .filter_map(|(k, c)| if k != diff_idx { Some(c) } else { None })
                         .collect();
                     return common_id;
                 }
-            }
         }
     }
     String::new()
