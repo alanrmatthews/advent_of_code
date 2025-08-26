@@ -1,5 +1,9 @@
-use crate::utilities::{self};
+use crate::utilities;
+use crate::days::base_day::BaseDay;
+use crate::days::day01::Day01;
+use crate::days::day02::Day02;
 
+mod base_day;
 mod day01;
 mod day02;
 // mod day03;
@@ -31,14 +35,16 @@ pub fn run_2018() {
 
     println!("Day 1: Chronal Calibration");
     let day1_input = utilities::get_input_contents(2018, 1);
-    println!("Part 1: {}", day01::part1(day1_input.as_str()));
-    println!("Part 2: {}", day01::part2(day1_input.as_str()));
+    let day1 = Day01;
+    println!("Part 1: {}", day1.part1(day1_input.as_str()));
+    println!("Part 2: {}", day1.part2(day1_input.as_str()));
     println!();
 
     println!("Day 2: Inventory Management System");
     let day2_input = utilities::get_input_contents(2018, 2);
-    println!("Part 1: {}", day02::part1(day2_input.as_str()));
-    println!("Part 2: {}", day02::part2(day2_input.as_str()));
+    let day2 = Day02;
+    println!("Part 1: {}", day2.part1(day2_input.as_str()));
+    println!("Part 2: {}", day2.part2(day2_input.as_str()));
     println!();
 
     // day03::run();
